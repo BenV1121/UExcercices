@@ -18,7 +18,7 @@ public class Explosives : MonoBehaviour
             Rigidbody targetRbody = nearbyColliders[i].GetComponent<Rigidbody>();
             if(targetRbody != null)
             {
-                targetRbody.AddExplosionForce;
+                //targetRbody.AddExplosionForce;
             }
         }
         Destroy(gameObject);

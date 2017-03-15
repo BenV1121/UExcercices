@@ -9,24 +9,27 @@ public interface IInteract
 
 public class Interact : MonoBehaviour 
 {
-    //public float interactDistance = 5f;
+    public float interactDistance = 5f;
 
-	// Update is called once per frame
-	void Update () 
+
+    float Interaction(float inter)
+    {
+        return interactDistance;
+    }
+
+    
+    // Update is called once per frame
+
+    void Update () 
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
             Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
 
-            float interactDistance = 5f;
+            interactDistance = 5f;
 
-            float Interaction(float inter)
-            {
-                return interactDistance;
-            }
-
-            if (Physics.Raycast(ray, out hit, InteractDistance))
+            if (Physics.Raycast(ray, out hit, interactDistance))
             {
                  if(hit.collider.CompareTag("Door"))
                 {
